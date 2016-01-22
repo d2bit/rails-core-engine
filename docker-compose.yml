@@ -1,0 +1,14 @@
+app:
+  image: d2bit/rails_pg:2.2
+  command: bundle exec rails s -p 3000 -b '0.0.0.0'
+  volumes:
+    - .:/app
+    - ../core:/core
+  working_dir: /app
+  ports:
+    - '3000:3000'
+  links:
+    - db
+  env_file: .env
+db:
+  image: postgres
