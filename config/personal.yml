@@ -1,0 +1,9 @@
+development:
+  name: david
+  skills:
+    - ruby
+    - haml
+  languages:
+    english: medium
+    spanish: high
+  age: <%= Time.now.year - 1983 %>
